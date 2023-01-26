@@ -1,0 +1,693 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+:root {
+    --background-color: #ffffff;
+    --foreground-color: #000000;
+    --buttons-color: rgb(73, 73, 195);
+    --links-color: rgb(57, 38, 152);
+    --button-border: 1px solid rgb(89, 89, 89, 0.5);
+    --hovered-color: rgb(55, 55, 80);
+    --h5-font-size: 22px;
+    --paragraph-font-size: 16px;
+}
+
+/* --------------------------------------styling of hero---------------------------*/
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+.logo {
+    color: var(--foreground-color);
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: poiter;
+}
+
+.logo span {
+    color: var(--buttons-color);
+}
+
+.menu ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: var(--links-color);
+    font-weight: bold;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.menu ul li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--hovered-color);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+
+.menu ul li a:hover::after {
+    width: 100%;
+    color: var(--hovered-color);
+    transition: .4s;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    
+}
+
+.hero-text>p,
+h1 {
+    color: var(--foreground-color);
+}
+
+.hero-text>h1 {
+    margin: 20px 0 20px;
+
+}
+
+.hero-text>p {
+    margin-bottom: 50px;
+    font-size: medium;
+}
+
+.newsletter form {
+    width: 380px;
+    max-width: 100%;
+    position: relative;
+}
+
+.newsletter form input:first-child {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 140px 14px 15px;
+    border: 2px solid var(--buttons-color);
+    outline: none;
+    border-radius: 30px;
+}
+
+.newsletter form input:last-child {
+    position: absolute;
+    display: inline-block;
+    outline: none;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: var(--buttons-color);
+    color: var(--foreground-color);
+    box-shadow: 0px 0px 5px var(--links-color);
+    top: 6px;
+    right: 6px;
+    transition-delay: .5s;
+
+}
+
+.newsletter form input:last-child:hover {
+    transform: scale(0.9);
+}
+.img{
+    float: right;
+    width: 60%;
+    padding: 10px;
+
+}
+
+/* --------------------------------------end of hero---------------------------*/
+
+/* --------------------------------------styling about---------------------------*/
+
+.about {
+    width: 100%;
+    padding: 100px;
+    background: transparent;
+
+}
+
+.about img {
+    height: auto;
+    width: 430px;
+    border: 1pc solid --links-color;
+    border-radius: 20px;
+}
+
+.about-text {
+    width: 550px;
+
+}
+
+.about-text h2 {
+    color: var(--foreground-color);
+    font-size: 50px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.about-text h5 {
+    color: var(--foreground-color);
+    letter-spacing: 2px;
+    font-size: var(--h5-font-size);
+    text-transform: capitalize;
+}
+
+.about-text h5 span {
+    color: var(--buttons-color);
+}
+
+.about-text p {
+    color: var(--foreground-color);
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin-bottom: 45px;
+
+    font-size: var(--paragraph-font-size);
+
+}
+
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 45px;
+}
+
+.button {
+    background-color: var(--buttons-color);
+    border: var(--button-border);
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+
+}
+
+.button:hover {
+    background-color: transparent;
+
+}
+
+.button a {
+    text-decoration: none;
+    color: var(--foreground-color);
+
+}
+
+/* --------------------------------------end styling about---------------------------*/
+/* --------------------------------------styling skills-----------------------*/
+
+
+
+.skills{
+    width: 100%;
+    padding: 100px;
+    background: transparent;
+
+
+}
+
+.skill-title{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.card{
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    min-height: 200px;
+    display: grid;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgb(0, 0, 0, 0.25);
+    transition: all .2s;
+    position: relative;
+
+
+}
+.card:hover{
+    box-shadow: 0px 6px 10px rgb(0, 0, 0, 0.4);
+    transform: scale(1.01);
+}
+
+.card-icon{
+    position:relative;
+    text-decoration:none;
+    color:rgba(225, 0, 0, 0.9);
+
+}
+
+
+
+.card-icon{
+    grid-row: 2/3;
+    font-size: 30px;
+}
+.card-title{
+    grid-row: 3/4;
+    font-weight: 400;
+    color: var(--foreground-color);
+
+}
+.card-aply{
+    grid-row: 4/5;
+    align-self: center;
+}
+
+
+/*---------------------styling projects ------------------*/
+
+
+
+.projects{
+    width: 100%;
+    padding: 100px;
+    background: transparent;
+
+
+}
+
+.projects-title{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.projects .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.card{
+    margin: 20px;
+    padding: 20px;
+    width: 500px;
+    min-height: 200px;
+    display: grid;
+    border-radius: 10px;
+    box-shadow: 0px 6px 10px rgb(0, 0, 0, 0.25);
+    transition: all .2s;
+    position: relative;
+
+
+}
+.card:hover{
+    box-shadow: 0px 6px 10px rgb(0, 0, 0, 0.4);
+    transform: scale(1.01);
+}
+.card h2{
+    color: var(--buttons-color);
+}
+
+.card-icon{
+    position:relative;
+    text-decoration:none;
+    color:rgba(225, 0, 0, 0.9);
+
+}
+
+
+
+.card-icon{
+    grid-row: 2/3;
+    font-size: 30px;
+}
+.card-title{
+    grid-row: 3/4;
+    font-weight: 400;
+    color: var(--foreground-color);
+
+}
+.card-aply{
+    grid-row: 4/5;
+    align-self: center;
+}
+
+/*-------------------------------contact --------------------------------*/
+.contact .container{
+    height: 70vh;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+ 
+}
+
+.contact .form-details{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+#form input{
+    width: auto;
+    height: 30px;
+    padding-left: 10px;
+    margin: 10px;
+    border: transparent;
+    border-radius: 30px;
+    border-bottom: 1px solid blue;
+}
+#form label{
+    margin-left: 10px;
+}
+#form textarea{
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    border-bottom: 1px solid blue;
+}
+/*---------------------------------footer-----------------------------------*/
+
+.footer{
+    height: 40vh;
+    background-color: var(--links-color);
+    color: var(--background-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: center;
+
+}
+.social-media, .dirrect-contact{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    line-height: 30px;
+
+}
+
+.footer a{
+    color: var(--background-color);
+    text-decoration: none;
+
+}
+.footer a:hover{
+    color: rgb(2, 3, 4,0.3);
+}
+/*---------------------media query ------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav .fa {
+    display: none;
+}
+
+@media only screen and (max-width:600px) {
+
+    .logo {
+        color: var(--foreground-color);
+        font-size: 25px;
+        letter-spacing: 1px;
+        cursor: poiter;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    nav .fa {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav div ul {
+        background-color: var(--buttons-color);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px; 
+        z-index: 2;
+        transition: right .5s;
+    }
+
+    nav div ul li {
+        display: block;
+        margin: 25px;
+        width: 100%;
+       
+
+    }
+
+    nav .menu ul .fa{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+
+    }
+
+
+    .hero {
+        height: 100vh;
+        width: 100%;
+        background-color: var(--background-color);
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 20px;
+        padding-left: 5%;
+        padding-right: 5%;
+    
+    }
+    
+    .logo {
+        color: var(--foreground-color);
+        font-size: 25px;
+        letter-spacing: .5px;
+        cursor: poiter;
+    }
+    
+    .logo span {
+        color: var(--buttons-color);
+    }
+    
+
+    
+    .menu ul li a::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        background: var(--hovered-color);
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+    }
+    .menu ul li a:hover{
+        background: var(--buttons-color);
+    }
+    
+    .menu ul li a:hover::after {
+        width: 100%;
+        color: var(--hovered-color);
+        transition: .4s;
+    
+    }
+    
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 8%;
+        transform: translateY(-50%)
+    }
+    
+    .hero-text>p,
+    h1 {
+        color: var(--foreground-color);
+    }
+    
+    .hero-text>h1 {
+        margin: 5px 0 5px;
+        font-size: 20px;
+        padding-bottom: 5px;
+    
+    }
+    
+    .hero-text>p {
+        margin-bottom: 40px;
+        font-size: smaller;
+    }
+    
+    .newsletter form {
+        width: 90%;
+        max-width: 100%;
+        position: relative;
+    }
+    
+    .newsletter form input:first-child {
+        display: inline-block;
+        width: 100%;
+        padding: 10px 140px 10px 15px;
+        border: 2px solid var(--buttons-color);
+        outline: none;
+        border-radius: 30px;
+    }
+    
+    .newsletter form input:last-child {
+        position: absolute;
+        display: inline-block;
+        outline: none;
+        border: none;
+        padding: 6px 20px;
+        border-radius: 30px;
+        background-color: var(--buttons-color);
+        color: var(--foreground-color);
+        box-shadow: 0px 0px 5px var(--links-color);
+        top: 6px;
+        right: 6px;
+        transition-delay: .5s;
+    
+    }
+    
+    .newsletter form input:last-child:hover {
+        transform: scale(.99);
+    }
+    
+    /* --------------------------------------end of hero---------------------------*/
+    
+    /* --------------------------------------styling about---------------------------*/
+    
+    .about {
+        width: 100%;
+        padding: 0px;
+        background: transparent;
+    
+    }
+    
+    .about img {
+        height: auto;
+        width: 100%;
+    }
+    
+    .about-text {
+        width: 100%;
+    
+    }
+    
+    .about-text h2 {
+        color: var(--foreground-color);
+        font-size: 30px;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+    }
+    
+    .about-text h5 {
+        color: var(--foreground-color);
+        letter-spacing: 1px;
+        font-size: var(--h5-font-size);
+        text-transform: capitalize;
+    }
+    
+    .about-text h5 span {
+        color: var(--buttons-color);
+    }
+    
+    .about-text p {
+        color: var(--foreground-color);
+        letter-spacing: 1px;
+        line-height: 30px;
+        margin-bottom: 30px;
+    
+        font-size: var(--paragraph-font-size);
+    
+    }
+    
+    .main {
+        
+        max-width: 95%;
+        display: grid;
+        margin: 0 auto;
+        align-items: center;
+    }
+    
+    .button {
+        background-color: var(--buttons-color);
+        border: var(--button-border);
+        padding: 13px 30px;
+        border-radius: 30px;
+        transition: .4s;
+    
+    }
+    
+    .button:hover {
+        background-color: transparent;
+    
+    }
+    
+    .button a {
+        text-decoration: none;
+        color: var(--foreground-color);
+    
+    }
+
+    /* -------------------------skills and projects-------------------*/
+    .skills, .projects{
+        width: 100%;
+        padding: 10px;
+        background: transparent;
+    
+    
+    }
+    
+    .cards{
+        width: 100%;
+    }
+    .card{
+        width: 100%;
+    }
+    
+    /*-----------------------------media queries of contact form------------------------*/
+
+
+}
